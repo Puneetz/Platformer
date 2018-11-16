@@ -149,10 +149,7 @@
 
         private void Flip()
         {
-            Vector3 transformLocalScale = transform.localScale;
-            transformLocalScale.x *= -1;
-            transform.localScale = transformLocalScale;
-
+            transform.Rotate(0.0f, 180.0f, 0.0f);
             _facingRight = !_facingRight;
         }
     }
