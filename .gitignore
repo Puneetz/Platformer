@@ -87,6 +87,7 @@ packages
 # ReSharper is a .NET coding add-in
 _ReSharper*
 _dotCover*
+*.DotSettings
 
 # Unity temporary files
 Library/
