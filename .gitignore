@@ -44,7 +44,6 @@ sysinfo.txt
 *_i.c
 *_p.c
 *.ilk
-*.meta
 *.obj
 *.pch
 *.pdb
@@ -61,10 +60,6 @@ sysinfo.txt
 *.dotCover
 
 *.nupkg
-
-# ReSharper is a .NET coding add-in
-_ReSharper*
-_dotCover*
 
 # Others
 [Bb]in
@@ -88,6 +83,10 @@ Desktop.ini
 
 *.sln.cache
 packages
+
+# ReSharper is a .NET coding add-in
+_ReSharper*
+_dotCover*
 
 # Unity temporary files
 Library/
