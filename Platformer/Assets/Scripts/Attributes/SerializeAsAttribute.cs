@@ -4,25 +4,25 @@
 
     using UnityEngine;
 
-    public class SerializeAs : PropertyAttribute
+    public class SerializeAsAttribute : PropertyAttribute
     {
         private readonly string _label;
 
-        public SerializeAs(string label)
+        public SerializeAsAttribute(string label)
         {
             _label = label;
         }
 
-        [CustomPropertyDrawer(typeof(SerializeAs))]
+        [CustomPropertyDrawer(typeof(SerializeAsAttribute))]
         public class ThisPropertyDrawer : PropertyDrawer
         {
             public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
             {
-                SerializeAs propertyAttribute = (SerializeAs)attribute;
+                SerializeAsAttribute propertyAttribute = (SerializeAsAttribute)attribute;
 
                 if (IsArray(property))
                 {
-                    Debug.LogWarningFormat("{0} (\"{1}\") does not support arrays", typeof(SerializeAs).Name, propertyAttribute._label);
+                    Debug.LogWarningFormat("{0} (\"{1}\") does not support arrays", typeof(SerializeAsAttribute).Name, propertyAttribute._label);
                 }
                 else
                 {
