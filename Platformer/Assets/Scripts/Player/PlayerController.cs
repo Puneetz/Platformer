@@ -1,5 +1,6 @@
 ﻿namespace Scripts.Player
 {
+    using System;
     using System.Linq;
 
     using Scripts.Events;
@@ -49,7 +50,7 @@
 
         private bool _wasCrouching;
 
-        private bool _facingRight = true;
+        private int _playerDirection = 1;
 
         private Rigidbody2D _rigidbody;
 
@@ -101,7 +102,9 @@
 
                 _rigidbody.velocity = Vector3.SmoothDamp(_rigidbody.velocity, targetVelocity, ref _velocity, _movementSmoothing);
 
-                if ((movement > 0 && !_facingRight) || (movement < 0 && _facingRight))
+                int movementSign = Math.Sign(movement);
+
+                if (movementSign != 0 && movementSign != _playerDirection)
                 {
                     Flip();
                 }
@@ -141,7 +144,7 @@
         private void Flip()
         {
             transform.Rotate(0.0f, 180.0f, 0.0f);
-            _facingRight = !_facingRight;
+            _playerDirection = -_playerDirection;
         }
     }
 }
