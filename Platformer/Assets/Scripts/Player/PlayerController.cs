@@ -2,7 +2,6 @@
 {
     using System.Linq;
 
-    using Scripts.Attributes;
     using Scripts.Events;
 
     using UnityEngine;
@@ -20,37 +19,29 @@
 
         public BoolEvent OnCrouchEvent;
 
-        [SerializeAs("Jump Force")]
         [SerializeField]
         private float _jumpForce = 400.0f;
 
         [Range(0.0f, 1.0f)]
-        [SerializeAs("Speed Fraction When Crouched")]
         [SerializeField]
         private float _speedFractionWhenCrouched = 0.36f;
 
         [Range(0, 0.3f)]
-        [SerializeAs("Movement Smoothing")]
         [SerializeField]
         private float _movementSmoothing = 0.05f;
 
-        [SerializeAs("Can Steer While Airborne")]
         [SerializeField]
         private bool _canSteerWhileAirborne;
 
-        [SerializeAs("Ground Layer Mask")]
         [SerializeField]
         private LayerMask _groundLayerMask;
 
-        [SerializeAs("Player Head")]
         [SerializeField]
         private Transform _playerHead; // A position marking where to check for ceilings
 
-        [SerializeAs("Player Feet")]
         [SerializeField]
         private Transform _playerFeet; // A position marking where to check for ground
 
-        [SerializeAs("Collider to Disable on Crouch")]
         [SerializeField]
         private Collider2D _colliderToDisableOnCrouch;
 
