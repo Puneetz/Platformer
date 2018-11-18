@@ -56,6 +56,8 @@
 
         private Vector3 _velocity = Vector3.zero;
 
+        public float JumpForce => _jumpForce;
+
         public void Move(float movement, bool crouch, bool jump)
         {
             if (!crouch)
