@@ -2,7 +2,7 @@
 {
     using UnityEngine;
 
-    public class GemCollision : MonoBehaviour
+    public class CollectibleCollision : MonoBehaviour
     {
         private Animator _gemAnimator;
 
