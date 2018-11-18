@@ -18,7 +18,10 @@
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            _gemAnimator.SetBool("IsCollected", true);
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                _gemAnimator.SetBool("IsCollected", true);
+            }
         }
     }
 }
