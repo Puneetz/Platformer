@@ -15,8 +15,8 @@ namespace Scripts.Collectibles
 
         public void OnDestroyAnimationFinished()
         {
-            _scoreScript.ScoreIncrease(10);
             Destroy(gameObject);
+            _scoreScript.ScoreIncrease(10);
         }
 
         private void Awake()

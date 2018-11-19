@@ -2311,6 +2311,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212868812390030212, guid: 6e8e244b2c4b3ff418df9deff8191dbe,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 81749b2336b6fbc4a87afeb54235857e, type: 2}
+    - target: {fileID: 212868812390030212, guid: 6e8e244b2c4b3ff418df9deff8191dbe,
+        type: 2}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e8e244b2c4b3ff418df9deff8191dbe, type: 2}
   m_IsPrefabAsset: 0
